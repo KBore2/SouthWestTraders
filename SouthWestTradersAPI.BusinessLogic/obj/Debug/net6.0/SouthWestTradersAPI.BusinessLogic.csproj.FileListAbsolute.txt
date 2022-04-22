@@ -1,0 +1,12 @@
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.BusinessLogic\bin\Debug\net6.0\SouthWestTradersAPI.BusinessLogic.deps.json
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.BusinessLogic\bin\Debug\net6.0\SouthWestTradersAPI.BusinessLogic.dll
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.BusinessLogic\bin\Debug\net6.0\ref\SouthWestTradersAPI.BusinessLogic.dll
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.BusinessLogic\bin\Debug\net6.0\SouthWestTradersAPI.BusinessLogic.pdb
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.BusinessLogic\obj\Debug\net6.0\SouthWestTradersAPI.BusinessLogic.csproj.AssemblyReference.cache
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.BusinessLogic\obj\Debug\net6.0\SouthWestTradersAPI.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.BusinessLogic\obj\Debug\net6.0\SouthWestTradersAPI.BusinessLogic.AssemblyInfoInputs.cache
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.BusinessLogic\obj\Debug\net6.0\SouthWestTradersAPI.BusinessLogic.AssemblyInfo.cs
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.BusinessLogic\obj\Debug\net6.0\SouthWestTradersAPI.BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.BusinessLogic\obj\Debug\net6.0\SouthWestTradersAPI.BusinessLogic.dll
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.BusinessLogic\obj\Debug\net6.0\ref\SouthWestTradersAPI.BusinessLogic.dll
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.BusinessLogic\obj\Debug\net6.0\SouthWestTradersAPI.BusinessLogic.pdb

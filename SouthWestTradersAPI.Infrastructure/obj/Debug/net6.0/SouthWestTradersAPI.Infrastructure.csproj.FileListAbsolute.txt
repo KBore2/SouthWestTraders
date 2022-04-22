@@ -1,0 +1,12 @@
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Infrastructure\bin\Debug\net6.0\SouthWestTradersAPI.Infrastructure.deps.json
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Infrastructure\bin\Debug\net6.0\SouthWestTradersAPI.Infrastructure.dll
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Infrastructure\bin\Debug\net6.0\ref\SouthWestTradersAPI.Infrastructure.dll
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Infrastructure\bin\Debug\net6.0\SouthWestTradersAPI.Infrastructure.pdb
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Infrastructure\obj\Debug\net6.0\SouthWestTradersAPI.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Infrastructure\obj\Debug\net6.0\SouthWestTradersAPI.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Infrastructure\obj\Debug\net6.0\SouthWestTradersAPI.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Infrastructure\obj\Debug\net6.0\SouthWestTradersAPI.Infrastructure.AssemblyInfo.cs
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Infrastructure\obj\Debug\net6.0\SouthWestTradersAPI.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Infrastructure\obj\Debug\net6.0\SouthWestTradersAPI.Infrastructure.dll
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Infrastructure\obj\Debug\net6.0\ref\SouthWestTradersAPI.Infrastructure.dll
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Infrastructure\obj\Debug\net6.0\SouthWestTradersAPI.Infrastructure.pdb
