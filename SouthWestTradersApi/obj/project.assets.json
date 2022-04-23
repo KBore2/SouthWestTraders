@@ -969,6 +969,19 @@
           }
         }
       },
+      "SouthWestTradersAPI.BusinessLogic/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "SouthWestTradersAPI.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SouthWestTradersAPI.BusinessLogic.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SouthWestTradersAPI.BusinessLogic.dll": {}
+        }
+      },
       "SouthWestTradersAPI.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -981,6 +994,20 @@
         },
         "runtime": {
           "bin/placeholder/SouthWestTradersAPI.Domain.dll": {}
+        }
+      },
+      "SouthWestTradersAPI.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.4",
+          "SouthWestTradersAPI.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SouthWestTradersAPI.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SouthWestTradersAPI.Infrastructure.dll": {}
         }
       }
     }
@@ -3641,16 +3668,28 @@
         "version.txt"
       ]
     },
+    "SouthWestTradersAPI.BusinessLogic/1.0.0": {
+      "type": "project",
+      "path": "../SouthWestTradersAPI.BusinessLogic/SouthWestTradersAPI.BusinessLogic.csproj",
+      "msbuildProject": "../SouthWestTradersAPI.BusinessLogic/SouthWestTradersAPI.BusinessLogic.csproj"
+    },
     "SouthWestTradersAPI.Domain/1.0.0": {
       "type": "project",
       "path": "../SouthWestTradersAPI.Domain/SouthWestTradersAPI.Domain.csproj",
       "msbuildProject": "../SouthWestTradersAPI.Domain/SouthWestTradersAPI.Domain.csproj"
+    },
+    "SouthWestTradersAPI.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../SouthWestTradersAPI.Infrastructure/SouthWestTradersAPI.Infrastructure.csproj",
+      "msbuildProject": "../SouthWestTradersAPI.Infrastructure/SouthWestTradersAPI.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.EntityFrameworkCore.Design >= 6.0.4",
+      "SouthWestTradersAPI.BusinessLogic >= 1.0.0",
       "SouthWestTradersAPI.Domain >= 1.0.0",
+      "SouthWestTradersAPI.Infrastructure >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -3681,8 +3720,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\KBore\\source\\repos\\SouthWestTraders\\SouthWestTradersAPI.BusinessLogic\\SouthWestTradersAPI.BusinessLogic.csproj": {
+              "projectPath": "C:\\Users\\KBore\\source\\repos\\SouthWestTraders\\SouthWestTradersAPI.BusinessLogic\\SouthWestTradersAPI.BusinessLogic.csproj"
+            },
             "C:\\Users\\KBore\\source\\repos\\SouthWestTraders\\SouthWestTradersAPI.Domain\\SouthWestTradersAPI.Domain.csproj": {
               "projectPath": "C:\\Users\\KBore\\source\\repos\\SouthWestTraders\\SouthWestTradersAPI.Domain\\SouthWestTradersAPI.Domain.csproj"
+            },
+            "C:\\Users\\KBore\\source\\repos\\SouthWestTraders\\SouthWestTradersAPI.Infrastructure\\SouthWestTradersAPI.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\KBore\\source\\repos\\SouthWestTraders\\SouthWestTradersAPI.Infrastructure\\SouthWestTradersAPI.Infrastructure.csproj"
             }
           }
         }

@@ -61,3 +61,7 @@ C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersApi\bin\Debug\net6.
 C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersApi\bin\Debug\net6.0\SouthWestTradersAPI.Domain.dll
 C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersApi\bin\Debug\net6.0\SouthWestTradersAPI.Domain.pdb
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersApi\bin\Debug\net6.0\SouthWestTradersAPI.BusinessLogic.dll
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersApi\bin\Debug\net6.0\SouthWestTradersAPI.Infrastructure.dll
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersApi\bin\Debug\net6.0\SouthWestTradersAPI.BusinessLogic.pdb
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersApi\bin\Debug\net6.0\SouthWestTradersAPI.Infrastructure.pdb

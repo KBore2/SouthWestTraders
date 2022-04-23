@@ -15,7 +15,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SouthWestTradersAPI.BusinessLogic\SouthWestTradersAPI.BusinessLogic.csproj" />
     <ProjectReference Include="..\SouthWestTradersAPI.Domain\SouthWestTradersAPI.Domain.csproj" />
+    <ProjectReference Include="..\SouthWestTradersAPI.Infrastructure\SouthWestTradersAPI.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

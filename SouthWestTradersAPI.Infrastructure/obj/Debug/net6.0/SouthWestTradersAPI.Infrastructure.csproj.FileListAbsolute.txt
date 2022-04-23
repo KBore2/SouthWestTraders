@@ -10,3 +10,6 @@ C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Infrastructure\
 C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Infrastructure\obj\Debug\net6.0\SouthWestTradersAPI.Infrastructure.dll
 C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Infrastructure\obj\Debug\net6.0\ref\SouthWestTradersAPI.Infrastructure.dll
 C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Infrastructure\obj\Debug\net6.0\SouthWestTradersAPI.Infrastructure.pdb
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Infrastructure\bin\Debug\net6.0\SouthWestTradersAPI.Domain.dll
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Infrastructure\bin\Debug\net6.0\SouthWestTradersAPI.Domain.pdb
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Infrastructure\obj\Debug\net6.0\SouthWestTradersAPI.Infrastructure.csproj.CopyComplete
