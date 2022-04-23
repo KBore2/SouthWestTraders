@@ -12,8 +12,8 @@ namespace SouthWestTradersAPI.Infrastructure.Repository
 {
     public class BaseRepository<TEntity> : IAsyncRepository<TEntity> where TEntity : class
     {
-        private readonly SouthWestTradersDBContext context;
-        private readonly DbSet<TEntity> dbset;
+        protected readonly SouthWestTradersDBContext context;
+        protected readonly DbSet<TEntity> dbset;
 
         public BaseRepository(SouthWestTradersDBContext context)
         {
@@ -49,7 +49,7 @@ namespace SouthWestTradersAPI.Infrastructure.Repository
         }
 
         public async Task<TEntity> UpdateAsync(Expression<Func<TEntity, bool>> expression, TEntity entity)
-        {
+        { 
             var response = await dbset.Where(expression).FirstAsync();
             if (response == null)
                 throw new Exception($"{typeof(TEntity).FullName} not found");
