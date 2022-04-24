@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "16ae72f7-175a-408c-af41-15adec8cd09b": {
+      "ProjectGuid": "16ae72f7-175a-408c-af41-15adec8cd09b",
+      "DisplayName": "SouthWestTradersApi",
+      "ColorIndex": 0
+    },
+    "29258c19-e486-40c4-884c-e122657f3e23": {
+      "ProjectGuid": "29258c19-e486-40c4-884c-e122657f3e23",
+      "DisplayName": "SouthWestTradersAPI.Domain",
+      "ColorIndex": 1
+    },
+    "76dc6a39-d6da-4ef0-9ec3-bbb4553c3443": {
+      "ProjectGuid": "76dc6a39-d6da-4ef0-9ec3-bbb4553c3443",
+      "DisplayName": "SouthWestTradersAPI.Infrastructure",
+      "ColorIndex": 2
+    },
+    "ce566275-e5a4-4908-a57e-c65845e0d448": {
+      "ProjectGuid": "ce566275-e5a4-4908-a57e-c65845e0d448",
+      "DisplayName": "SouthWestTradersAPI.BusinessLogic",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 4
+}

@@ -12,17 +12,22 @@ namespace SouthWestTradersAPI.BusinessLogic.Services
     public class ProductService : IProductService
     {
         private readonly IProductRepository repository;
+        private readonly IStockService stockService;
 
-        public ProductService(IProductRepository repository)
+        public ProductService(IProductRepository repository, IStockService stockService)
         {
             this.repository = repository;
+            this.stockService = stockService;
         }
 
         public async Task<Product> AddProduct(Product product)
         {
             try
             {
-                return await repository.AddAsync(product);
+                
+                var prod = await repository.AddAsync(product);
+                await stockService.AddStock(new Stock { ProductId = prod.ProductId });
+                return prod;
             }
             catch (Exception ex)
             {

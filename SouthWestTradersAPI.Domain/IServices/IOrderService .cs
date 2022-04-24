@@ -15,7 +15,7 @@ namespace SouthWestTradersAPI.Domain.IServices
 
         Task<Order> GetOrderByName(string name);
 
-        Task<Order> GetOrdersByDate(string name);
+        Task<List<Order>> GetOrdersByDate(DateTime date);
 
         Task<Order> CancelOrder(int id);
 

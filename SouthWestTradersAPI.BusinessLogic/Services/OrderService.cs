@@ -12,14 +12,14 @@ namespace SouthWestTradersAPI.BusinessLogic.Services
     public class OrderService : IOrderService
     {
         private readonly IOrderRepository repository;
-        private readonly IProductRepository productRepository;
-        private readonly IStockRepository stockRepository;
+        private readonly IStockService stockService;
+        private readonly IOrderStateService orderStateService;
 
-        public OrderService(IOrderRepository repository, IProductRepository productRepository, IStockRepository stockRepository)
+        public OrderService(IOrderRepository repository, IStockService stockService, IOrderStateService orderStateService)
         {
             this.repository = repository;
-            this.productRepository = productRepository;
-            this.stockRepository = stockRepository;
+            this.stockService = stockService;
+            this.orderStateService = orderStateService;
         }
 
         public async Task<Order> AddOrder(Order Order)
@@ -27,15 +27,13 @@ namespace SouthWestTradersAPI.BusinessLogic.Services
             try
             {
 
-                var stock = await stockRepository.GetAsync(s => s.ProductId == Order.ProductId);
-                if (stock == null)
-                    throw new Exception("product not found");
-
+                var stock = await stockService.GetStockfForProduct(Order.ProductId);
+               
                 if (Order.Quantity > stock.AvailableStock)
                     throw new Exception("no available stock");
 
                 stock.AvailableStock = stock.AvailableStock - Order.Quantity;
-                await stockRepository.UpdateAsync(s => s.StockId == stock.StockId, stock);
+                await stockService.UpdateStock(stock);
 
                 return await repository.AddAsync(Order);
 
@@ -54,20 +52,17 @@ namespace SouthWestTradersAPI.BusinessLogic.Services
                 if (order == null)
                     throw new Exception("order not found");
 
-                if(order.OrderStateId == 3)
+                var completeOrderState = await orderStateService.GetOrderStateByState("COMPLETED");
+                if(order.OrderStateId == completeOrderState.OrderStateId)
                     throw new Exception("order complete, cannot be cancelled");
 
-                var stock = await stockRepository.GetAsync(s => s.ProductId == order.ProductId);
-                if (stock == null)
-                    throw new Exception("product not found");
-
-                if (order.Quantity > stock.AvailableStock)
-                    throw new Exception("no available stock");
+                var stock = await stockService.GetStockfForProduct(order.ProductId);
 
                 stock.AvailableStock = stock.AvailableStock + order.Quantity;
-                await stockRepository.UpdateAsync(s => s.StockId == stock.StockId, stock);
+                await stockService.UpdateStock(stock);
 
-                order.OrderStateId = 2; 
+                var cancledOrderState = await orderStateService.GetOrderStateByState("COMPLETE");
+                order.OrderStateId = cancledOrderState.OrderStateId;
                 return await repository.UpdateAsync(o => o.OrderId == id, order);
 
             }
@@ -85,7 +80,8 @@ namespace SouthWestTradersAPI.BusinessLogic.Services
                 if (order == null)
                     throw new Exception("order not found");
 
-                order.OrderStateId = 3;
+                var completeOrderState = await orderStateService.GetOrderStateByState("COMPLETE");
+                order.OrderStateId = completeOrderState.OrderStateId;
                 return await repository.UpdateAsync(o => o.OrderId == id, order);
 
             }
@@ -99,7 +95,7 @@ namespace SouthWestTradersAPI.BusinessLogic.Services
         {
             try
             {
-                return await repository.ListAsync(o => o.Equals(o));
+                return await repository.ListAsync(o => true);
             }
             catch(Exception ex)
             {
@@ -129,11 +125,6 @@ namespace SouthWestTradersAPI.BusinessLogic.Services
             {
                 throw new Exception(ex.Message);
             }
-        }
-
-        public Task<Order> GetOrdersByDate(string name)
-        {
-            throw new NotImplementedException();
         }
 
         public async Task RemoveOrderById(int id)
