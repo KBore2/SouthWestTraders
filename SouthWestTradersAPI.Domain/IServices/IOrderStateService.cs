@@ -17,7 +17,7 @@ namespace SouthWestTradersAPI.Domain.IServices
 
         Task<OrderState> GetOrderStateById(int id);
 
-        Task>OrderState UpdateOrderState(OrderState OrderState);
+        Task<OrderState> UpdateOrderState(OrderState OrderState);
 
         Task RemoveOrderStateById(int id);
     }

@@ -7,10 +7,17 @@ using SouthWestTradersAPI.Infrastructure.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddTransient<IProductService, ProductService>();
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
-builder.Services.AddTransient<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 
+builder.Services.AddScoped<IOrderStateService, OrderStateService>();
+builder.Services.AddScoped<IOrderStateRepository, OrderStateRepository>();
+
+builder.Services.AddScoped<IStockService, StockService>();
+builder.Services.AddScoped<IStockRepository, StockRepository>();
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -22,6 +29,7 @@ builder.Services.AddDbContext<SouthWestTradersDBContext>(
     options =>
     {
         options.UseSqlServer(builder.Configuration.GetConnectionString("DBConnection"));
+        options.UseQueryTrackingBehavior((QueryTrackingBehavior.NoTracking));
     });
 
 var app = builder.Build();

@@ -46,7 +46,6 @@ namespace SouthWestTradersAPI.Infrastructure.Data
                 entity.HasOne(d => d.OrderState)
                     .WithMany(p => p.Orders)
                     .HasForeignKey(d => d.OrderStateId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Order_OrderState");
 
                 entity.HasOne(d => d.Product)
@@ -78,7 +77,6 @@ namespace SouthWestTradersAPI.Infrastructure.Data
                 entity.HasOne(d => d.Product)
                     .WithMany(p => p.Stocks)
                     .HasForeignKey(d => d.ProductId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Stock_Product");
             });
 

@@ -34,7 +34,7 @@ namespace SouthWestTradersAPI.BusinessLogic.Services
 
                 stock.AvailableStock = stock.AvailableStock - Order.Quantity;
                 await stockService.UpdateStock(stock);
-
+                
                 return await repository.AddAsync(Order);
 
             }
@@ -52,7 +52,7 @@ namespace SouthWestTradersAPI.BusinessLogic.Services
                 if (order == null)
                     throw new Exception("order not found");
 
-                var completeOrderState = await orderStateService.GetOrderStateByState("COMPLETED");
+                var completeOrderState = await orderStateService.GetOrderStateByState("COMPLETE");
                 if(order.OrderStateId == completeOrderState.OrderStateId)
                     throw new Exception("order complete, cannot be cancelled");
 
@@ -61,7 +61,7 @@ namespace SouthWestTradersAPI.BusinessLogic.Services
                 stock.AvailableStock = stock.AvailableStock + order.Quantity;
                 await stockService.UpdateStock(stock);
 
-                var cancledOrderState = await orderStateService.GetOrderStateByState("COMPLETE");
+                var cancledOrderState = await orderStateService.GetOrderStateByState("CANCELLED");
                 order.OrderStateId = cancledOrderState.OrderStateId;
                 return await repository.UpdateAsync(o => o.OrderId == id, order);
 

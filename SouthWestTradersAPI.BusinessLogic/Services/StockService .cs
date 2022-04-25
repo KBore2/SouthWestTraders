@@ -66,9 +66,16 @@ namespace SouthWestTradersAPI.BusinessLogic.Services
             }
         }
 
-        public Task<Stock> UpdateStock(Stock Stock)
+        public async Task<Stock> UpdateStock(Stock Stock)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return await repository.UpdateAsync(s => s.StockId == Stock.StockId,Stock);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
     }
 }

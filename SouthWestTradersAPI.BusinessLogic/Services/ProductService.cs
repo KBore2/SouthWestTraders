@@ -26,7 +26,7 @@ namespace SouthWestTradersAPI.BusinessLogic.Services
             {
                 
                 var prod = await repository.AddAsync(product);
-                await stockService.AddStock(new Stock { ProductId = prod.ProductId });
+                var stock = await stockService.AddStock(new Stock { ProductId = prod.ProductId });
                 return prod;
             }
             catch (Exception ex)
@@ -63,6 +63,7 @@ namespace SouthWestTradersAPI.BusinessLogic.Services
         {
             try
             {
+                
                 await repository.RemoveAsync(p => p.ProductId == id);
             }
             catch (Exception ex)

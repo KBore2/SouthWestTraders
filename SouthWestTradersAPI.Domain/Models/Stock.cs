@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace SouthWestTradersAPI.Domain.Models
 {
@@ -7,8 +8,9 @@ namespace SouthWestTradersAPI.Domain.Models
     {
         public int StockId { get; set; }
         public int ProductId { get; set; }
-        public int AvailableStock { get; set; } =0;
+        public int AvailableStock { get; set; }
 
-        public virtual Product Product { get; set; } = null!;
+        [JsonIgnore]
+        public virtual Product? Product { get; set; }
     }
 }

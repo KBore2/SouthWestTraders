@@ -63,5 +63,10 @@ namespace SouthWestTradersAPI.BusinessLogic.Services
         {
             throw new NotImplementedException();
         }
+
+        Task<OrderState> IOrderStateService.UpdateOrderState(OrderState OrderState)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
