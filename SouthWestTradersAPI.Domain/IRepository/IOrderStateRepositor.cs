@@ -9,5 +9,12 @@ namespace SouthWestTradersAPI.Domain.IRepository
 {
     public interface IOrderStateRepository : IAsyncRepository<OrderState>
     {
+        Task<IEnumerable<OrderState>> GetCachedOrderStates();
+
+
+        Task<OrderState> GetCachedOrderStatesByKey(int orderStateId);
+
+
+        Task<OrderState> GetCachedOrderStatesByName(string state);
     }
 }

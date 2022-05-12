@@ -22,121 +22,85 @@ namespace SouthWestTradersAPI.BusinessLogic.Services
             this.orderStateService = orderStateService;
         }
 
-        public async Task<Order> AddOrder(Order Order)
+        public async Task<Response<Order>> AddOrder(Order Order)
         {
-            try
-            {
+            var stock = await stockService.GetStockfForProduct(Order.ProductId);
+            if(stock == null)
+                return new Response<Order>(Model:null, Message:"no stock found",HasError: true);
 
-                var stock = await stockService.GetStockfForProduct(Order.ProductId);
-               
-                if (Order.Quantity > stock.AvailableStock)
-                    throw new Exception("no available stock");
+            if (Order.Quantity > stock.AvailableStock)
+                return new Response<Order>(null, "no stock found",true); ;
+                    
 
-                stock.AvailableStock = stock.AvailableStock - Order.Quantity;
-                await stockService.UpdateStock(stock);
+            stock.AvailableStock = stock.AvailableStock - Order.Quantity;
+            
+            await stockService.UpdateStock(stock);
                 
-                return await repository.AddAsync(Order);
-
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+           var order = await repository.AddAsync(Order);
+           return new Response<Order>(order, "",false);
         }
 
         public async Task<Order> CancelOrder(int id)
         {
-            try
-            {
-                var order = await repository.GetAsync(o => o.OrderId == id);
-                if (order == null)
-                    throw new Exception("order not found");
+           
+            var order = await repository.GetAsync(o => o.OrderId == id);
+                
 
-                var completeOrderState = await orderStateService.GetOrderStateByState("COMPLETE");
-                if(order.OrderStateId == completeOrderState.OrderStateId)
-                    throw new Exception("order complete, cannot be cancelled");
+            var completeOrderState = await orderStateService.GetOrderStateByState("COMPLETE");
+                
 
-                var stock = await stockService.GetStockfForProduct(order.ProductId);
+            var stock = await stockService.GetStockfForProduct(order.ProductId);
+            if (stock == null)
+                new Response<Order>(Model: null, Message: "no stock found", HasError: true);
 
-                stock.AvailableStock = stock.AvailableStock + order.Quantity;
-                await stockService.UpdateStock(stock);
+            stock.AvailableStock = stock.AvailableStock + order.Quantity;
+            await stockService.UpdateStock(stock);
 
-                var cancledOrderState = await orderStateService.GetOrderStateByState("CANCELLED");
-                order.OrderStateId = cancledOrderState.OrderStateId;
-                return await repository.UpdateAsync(o => o.OrderId == id, order);
-
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            var cancledOrderState = await orderStateService.GetOrderStateByState("CANCELLED");
+            order.OrderStateId = cancledOrderState.OrderStateId;
+            return await repository.UpdateAsync(o => o.OrderId == id, order);
         }
 
         public async Task<Order> CompleteOrder(int id)
         {
-            try
-            {
-                var order = await repository.GetAsync(o => o.OrderId == id);
-                if (order == null)
-                    throw new Exception("order not found");
+            
+            var order = await repository.GetAsync(o => o.OrderId == id);
+            if (order == null)
+                throw new Exception("order not found");
 
-                var completeOrderState = await orderStateService.GetOrderStateByState("COMPLETE");
-                order.OrderStateId = completeOrderState.OrderStateId;
-                return await repository.UpdateAsync(o => o.OrderId == id, order);
+            var completeOrderState = await orderStateService.GetOrderStateByState("COMPLETE");
+            order.OrderStateId = completeOrderState.OrderStateId;
+            return await repository.UpdateAsync(o => o.OrderId == id, order);
 
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
         }
 
         public async Task<List<Order>> GetAllOrders()
         {
-            try
-            {
-                return await repository.ListAsync(o => true);
-            }
-            catch(Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            
+            return await repository.ListAsync(o => true);
+            
         }
 
-        public async Task<Order> GetOrderByName(string name)
+        public async Task<Response<Order>> GetOrderByName(string name)
         {
-            try
-            {
-                return await repository.GetAsync(o => o.Name == name);
-            }
-            catch(Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            
+            var order =  await repository.GetAsync(o => o.Name == name);
+            if (order == null)
+                return new Response<Order>(null, "order not found",false);
+
+            return new Response<Order>(order,string.Empty,false);
+            
         }
 
         public async Task<List<Order>> GetOrdersByDate(DateTime date)  
         {
-            try
-            {
-                return await repository.ListAsync(o => o.CreatedDateUtc <= date && o.CreatedDateUtc >= date);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            
+            return await repository.ListAsync(o => o.CreatedDateUtc <= date && o.CreatedDateUtc >= date);
         }
 
         public async Task RemoveOrderById(int id)
         {
-            try
-            {
-                await repository.RemoveAsync(p => p.OrderId == id);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            await repository.RemoveAsync(p => p.OrderId == id);
         }
 
         

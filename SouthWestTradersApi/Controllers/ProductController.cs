@@ -38,9 +38,13 @@ namespace SouthWestTradersApi.Controllers
         }
 
         [HttpGet("{name}")]
-        public async Task<ActionResult<Product>> GetProductByName(string name)
+        //Task<Product> for Queries
+        public async Task<Product> GetProductByName(string name)
         {
-            return Ok( await service.GetProductByName(name));
+            
+           var response = await service.GetProductByName(name);
+           return response;
+            
         }
 
     }

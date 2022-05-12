@@ -11,9 +11,9 @@ namespace SouthWestTradersAPI.Domain.IServices
     {
         Task<List<Order>> GetAllOrders();
 
-        Task<Order> AddOrder(Order Order);
+        Task<Response<Order>> AddOrder(Order Order);
 
-        Task<Order> GetOrderByName(string name);
+        Task<Response<Order>> GetOrderByName(string name);
 
         Task<List<Order>> GetOrdersByDate(DateTime date);
 

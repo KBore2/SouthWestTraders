@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SouthWestTradersApi</name>
+    </assembly>
+    <members>
+        <member name="M:SouthWestTradersApi.Controllers.OrderController.GetAllOrders">
+            <summary>
+            Gets all orders
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

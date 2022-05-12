@@ -65,3 +65,10 @@ C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersApi\bin\Debug\net6.
 C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersApi\bin\Debug\net6.0\SouthWestTradersAPI.Infrastructure.dll
 C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersApi\bin\Debug\net6.0\SouthWestTradersAPI.BusinessLogic.pdb
 C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersApi\bin\Debug\net6.0\SouthWestTradersAPI.Infrastructure.pdb
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersApi\bin\Debug\net6.0\SouthWestTradersApi.xml
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersApi\obj\Debug\net6.0\SouthWestTradersApi.xml
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersApi\bin\Debug\net6.0\IdentityModel.dll
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersApi\bin\Debug\net6.0\IdentityServer4.dll
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersApi\bin\Debug\net6.0\IdentityServer4.Storage.dll
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersApi\bin\Debug\net6.0\Newtonsoft.Json.dll

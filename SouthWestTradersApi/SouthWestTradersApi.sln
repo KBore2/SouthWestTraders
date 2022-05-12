@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SouthWestTradersAPI.Infrast
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SouthWestTradersAPI.BusinessLogic", "..\SouthWestTradersAPI.BusinessLogic\SouthWestTradersAPI.BusinessLogic.csproj", "{CE566275-E5A4-4908-A57E-C65845E0D448}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SouthWestTradersAPI.Tests", "..\SouthWestTradersAPI.Tests\SouthWestTradersAPI.Tests.csproj", "{38745D71-1E65-4E33-8D22-9DE2FA54C425}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SouthWestTradersAPI.Tests", "..\SouthWestTradersAPI.Tests\SouthWestTradersAPI.Tests.csproj", "{38745D71-1E65-4E33-8D22-9DE2FA54C425}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

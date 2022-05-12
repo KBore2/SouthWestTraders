@@ -17,6 +17,10 @@ namespace SouthWestTradersApi.Controllers
             this.service = service;
         }
 
+        /// <summary>
+        /// Gets all orders
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<ActionResult<List<Order>>> GetAllOrders()
         {
@@ -34,13 +38,24 @@ namespace SouthWestTradersApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Order>> AddOrder(Order Order)
         {
-            return Ok(await service.AddOrder(Order));
+            var respone = await service.AddOrder(Order);
+            if (respone.Model == null)
+                return BadRequest(respone.Message);
+
+            return Ok(respone.Model);
+
+
         }
 
         [HttpGet("{name}")]
         public async Task<ActionResult<Order>> GetOrderByName(string name)
         {
-            return Ok( await service.GetOrderByName(name));
+           var response = await service.GetOrderByName(name);
+            if (response.Model == null)
+                return BadRequest(response.Message);
+
+            return Ok(response.Model);
+
         }
 
 

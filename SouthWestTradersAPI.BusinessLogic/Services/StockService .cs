@@ -20,62 +20,38 @@ namespace SouthWestTradersAPI.BusinessLogic.Services
 
         public async Task<Stock> AddStock(Stock Stock)
         {
-            try
-            {
-                return await repository.AddAsync(Stock);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            
+              return await repository.AddAsync(Stock);
+            
         }
 
         public async Task<List<Stock>> GetAllStocks()
         {
-            try
-            {
-                return await repository.ListAsync(p => p.Equals(p));
-            }
-            catch(Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+           
+             return await repository.ListAsync(p => p.Equals(p));
+           
         }
 
         public async Task<Stock> GetStockfForProduct(int id)
         {
-            try
-            {
-                return await repository.GetAsync(s => s.ProductId == id);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            
+             return await repository.GetAsync(s => s.ProductId == id);
+            
+           
         }
 
         public async Task RemoveStockById(int id)
         {
-            try
-            {
-                await repository.RemoveAsync(p => p.StockId == id);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            
+           await repository.RemoveAsync(p => p.StockId == id);
+          
         }
 
         public async Task<Stock> UpdateStock(Stock Stock)
         {
-            try
-            {
-                return await repository.UpdateAsync(s => s.StockId == Stock.StockId,Stock);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            
+           return await repository.UpdateAsync(s => s.StockId == Stock.StockId,Stock);
+           
         }
     }
 }

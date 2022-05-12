@@ -22,54 +22,29 @@ namespace SouthWestTradersAPI.BusinessLogic.Services
 
         public async Task<Product> AddProduct(Product product)
         {
-            try
-            {
-                
-                var prod = await repository.AddAsync(product);
-                var stock = await stockService.AddStock(new Stock { ProductId = prod.ProductId });
-                return prod;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            var prod = await repository.AddAsync(product);
+            var stock = await stockService.AddStock(new Stock { ProductId = prod.ProductId });
+            return prod;
         }
 
         public async Task<List<Product>> GetAllProducts()
         {
-            try
-            {
-                return await repository.ListAsync(p => p.Equals(p));
-            }
-            catch(Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+           
+            return await repository.ListAsync(p => p.Equals(p));
+            
         }
 
-        public async Task<Product> GetProductByName(string name)
+        public async Task<Product?> GetProductByName(string name)
         {
-            try
-            {
-                return await repository.GetAsync(p => p.Name == name);
-            }
-            catch(Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            return await repository.GetAsync(p => p.Name == name);
+            
         }
 
         public async Task RemoveProductById(int id)
         {
-            try
-            {
-                
-                await repository.RemoveAsync(p => p.ProductId == id);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+           
+             await repository.RemoveAsync(p => p.ProductId == id);
+           
         }
     }
 }

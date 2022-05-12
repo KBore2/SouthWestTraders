@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qxfBcxfLRb6ekNR2Q4doo+W+vdyNrdRcswyHPqcVFKHq9OEnVNh5jdMuYbP5oWFwKfrjRQyLf9A/vJVNWkd5cA==",
+  "dgSpecHash": "1SL56baGbv89j2yYd23JR11DDuz1Rf23oJ2jnb+phBiJ1edGXLzeGBdAvMrZ3xta9Ca9Kdtzdcs2gGtlGwNTYw==",
   "success": true,
   "projectFilePath": "C:\\Users\\KBore\\source\\repos\\SouthWestTraders\\SouthWestTradersAPI.Infrastructure\\SouthWestTradersAPI.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -31,6 +31,7 @@
     "C:\\Users\\KBore\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\KBore\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\KBore\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\KBore\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\KBore\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\KBore\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\KBore\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",

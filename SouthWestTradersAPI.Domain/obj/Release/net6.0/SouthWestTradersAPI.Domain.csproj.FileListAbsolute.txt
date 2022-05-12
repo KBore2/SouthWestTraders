@@ -1,0 +1,14 @@
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Domain\bin\Release\net6.0\SouthWestTradersAPI.Domain.deps.json
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Domain\bin\Release\net6.0\SouthWestTradersAPI.Domain.runtimeconfig.json
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Domain\bin\Release\net6.0\SouthWestTradersAPI.Domain.dll
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Domain\bin\Release\net6.0\ref\SouthWestTradersAPI.Domain.dll
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Domain\bin\Release\net6.0\SouthWestTradersAPI.Domain.pdb
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Domain\obj\Release\net6.0\SouthWestTradersAPI.Domain.csproj.AssemblyReference.cache
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Domain\obj\Release\net6.0\SouthWestTradersAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Domain\obj\Release\net6.0\SouthWestTradersAPI.Domain.AssemblyInfoInputs.cache
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Domain\obj\Release\net6.0\SouthWestTradersAPI.Domain.AssemblyInfo.cs
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Domain\obj\Release\net6.0\SouthWestTradersAPI.Domain.csproj.CoreCompileInputs.cache
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Domain\obj\Release\net6.0\SouthWestTradersAPI.Domain.dll
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Domain\obj\Release\net6.0\ref\SouthWestTradersAPI.Domain.dll
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Domain\obj\Release\net6.0\SouthWestTradersAPI.Domain.pdb
+C:\Users\KBore\source\repos\SouthWestTraders\SouthWestTradersAPI.Domain\obj\Release\net6.0\SouthWestTradersAPI.Domain.genruntimeconfig.cache

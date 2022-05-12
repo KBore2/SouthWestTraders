@@ -28,9 +28,9 @@ namespace SouthWestTradersAPI.Infrastructure.Repository
            return entity;
         }
 
-        public async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> expression)
+        public async Task<TEntity?> GetAsync(Expression<Func<TEntity, bool>> expression)
         {
-            return await dbset.Where(expression).FirstAsync();
+            return await dbset.Where(expression).FirstOrDefaultAsync();
         }
 
         public async Task<List<TEntity>> ListAsync(Expression<Func<TEntity, bool>> expression)
@@ -40,19 +40,19 @@ namespace SouthWestTradersAPI.Infrastructure.Repository
 
         public async Task RemoveAsync(Expression<Func<TEntity, bool>> expression)
         {
-            var response = await dbset.Where(expression).FirstAsync();
+            var response = await dbset.Where(expression).FirstOrDefaultAsync();
             if (response == null)
-                throw new Exception($"{typeof(TEntity).FullName} not found");
+                return;
 
             dbset.Remove(response);
             context.SaveChanges();
         }
 
-        public async Task<TEntity> UpdateAsync(Expression<Func<TEntity, bool>> expression, TEntity entity)
+        public async Task<TEntity?> UpdateAsync(Expression<Func<TEntity, bool>> expression, TEntity entity)
         { 
-            var response = await dbset.Where(expression).FirstAsync();
+            var response = await dbset.Where(expression).FirstOrDefaultAsync();
             if (response == null)
-                throw new Exception($"{typeof(TEntity).FullName} not found");
+               return null;
 
             dbset.Update(entity);
             context.SaveChanges();

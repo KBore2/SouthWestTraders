@@ -13,7 +13,7 @@ namespace SouthWestTradersAPI.Domain.IServices
 
         Task<Product> AddProduct(Product product);
 
-        Task<Product> GetProductByName(string name);
+        Task<Product?> GetProductByName(string name);
 
         Task RemoveProductById(int id);
     }

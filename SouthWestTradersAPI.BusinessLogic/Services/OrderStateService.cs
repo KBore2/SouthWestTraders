@@ -34,7 +34,7 @@ namespace SouthWestTradersAPI.BusinessLogic.Services
         {
             try
             {
-                return await repository.GetAsync(os => os.OrderStateId == id);
+                return await repository.GetCachedOrderStatesByKey(id);
             }
             catch (Exception ex)
             {
@@ -46,7 +46,7 @@ namespace SouthWestTradersAPI.BusinessLogic.Services
         {
             try
             {
-                return await repository.GetAsync(os => os.State == state);
+                return await repository.GetCachedOrderStatesByName(state);
             }
             catch (Exception ex)
             {

@@ -11,13 +11,13 @@ namespace SouthWestTradersAPI.Domain.IRepository
     {
         Task<List<TEntity>> ListAsync(Expression<Func<TEntity,bool>> expression);
 
-        Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> expression);
+        Task<TEntity?> GetAsync(Expression<Func<TEntity, bool>> expression);
 
         Task RemoveAsync(Expression<Func<TEntity, bool>> expression);
 
         Task<TEntity> AddAsync(TEntity entity);
 
-        Task<TEntity> UpdateAsync(Expression<Func<TEntity, bool>> expression, TEntity entity);
+        Task<TEntity?> UpdateAsync(Expression<Func<TEntity, bool>> expression, TEntity entity);
 
 
     }
